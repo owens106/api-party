@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 
 import './Github.css'
 
+import {Route} from 'react-router-dom'
+
 class Github extends Component {
     state={
         username:'',
@@ -14,7 +16,7 @@ class Github extends Component {
 
     handleSubmit = (ev) =>{
         ev.preventDefault()
-        this.props.history.push('/github/'+this.state.username)
+        this.props.history.push(`/github/${this.state.username}`)
     }
 
   render() {
@@ -33,6 +35,8 @@ class Github extends Component {
             <button type="submit">Look up GitHub user</button>
           </div>
         </form>
+            <Route path ='/github/:username' render ={(props) => <h3>you entered {props.match.params.username}</h3>}/>
+            <Route exact path ='/github' render ={() => <h3>please enter a name to search </h3>}/>
       </div>
     )
   }
