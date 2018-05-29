@@ -29,14 +29,35 @@ class NationalGeoInfo extends Component{
     }
 
     render(){
-        const {info}=this.state
-        console.log(info.articles)
-        const test=info.articles
-        debugger
+        if(this.state.info.articles){
+            const test=this.state.info.articles
+            console.log(test)
+            
+            
+            return(
+                <div className ='NationalGeoInfo'>
+                    <img src={test[0].urlToImage} 
+                        alt="article image" 
+                        height="300px"
+                        width="300px"
+                    />
+                    <h2><a href={test[0].url} target="_blank">{test[0].title} BY: {test[0].author}</a></h2>
+                    <br/>
+                    <br/>
+                    <img src={test[1].urlToImage} 
+                        alt="article image" 
+                        height="300px"
+                        width="300px"
+                    />
+                    <h2><a href={test[1].url} target="_blank">{test[1].title} BY: {test[1].author}</a></h2>
+                </div>
+            )
+        }
+        
         
         return(
-          <div className ='NationalGeo Info'>
-              <h2>test</h2>
+          <div className ='NationalGeoInfo'>
+              <h2>Select a Link</h2>
           </div>
 
         )

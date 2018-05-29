@@ -16,11 +16,9 @@ class NationalGeo extends Component {
 
         <h2>Select a link</h2>
         <ul className="navLinks">
+          
           <li>
-            <NavLink to="/nationalGeo/photo-of-day">Photo of the day</NavLink>
-          </li>
-          <li>
-            <NavLink to="/nationalGeo/article-of-day">Article of the Day</NavLink>
+            <NavLink to="/nationalGeo/article-of-day">Articles of the Day</NavLink>
           </li>
           
         </ul>
