@@ -4,6 +4,7 @@ import { Route, Switch, NavLink } from 'react-router-dom'
 import './App.css'
 import Github from './Github'
 import Nasa from './Nasa'
+import NationalGeo from './NationalGeo'
 
 class App extends Component {
   render() {
@@ -20,10 +21,15 @@ class App extends Component {
           <li>
             <NavLink to="/nasa">NASA API</NavLink>
           </li>
+          <li>
+            <NavLink to="/nationalGeo">National Geographic api</NavLink>
+          </li>
         </ul>
         <Switch>
           <Route path="/github" component={Github} />
           <Route path="/nasa" component={Nasa} />
+          <Route path="/nationalGeo" component={NationalGeo} />
+
           <Route render={() => <p>To get started, click one of the links above.</p>} />
         </Switch>
       </div>
