@@ -8,6 +8,10 @@ class Github extends Component {
 
     }
 
+    handleChange = (ev) =>{
+        this.setState({username: ev.target.value})
+    }
+
   render() {
     return (
       <div className="Github">
@@ -18,7 +22,7 @@ class Github extends Component {
         />
         <form>
           <div>
-            <input type="text" value={this.state.username}/>
+            <input type="text" value={this.state.username} onChange={this.handleChange}/>
           </div>
           <div>
             <button type="submit">Look up GitHub user</button>
