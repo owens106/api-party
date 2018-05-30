@@ -31,7 +31,6 @@ class NationalGeoInfo extends Component{
     render(){
         if(this.state.info.articles){
             const test=this.state.info.articles
-            console.log(test)
             
             
             return(
